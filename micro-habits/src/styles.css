@@ -1,0 +1,652 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+h3 {
+  font-family: Monospace;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6eecd1;
+}
+
+.slidePhoto2 {
+
+  flex: 1;
+  width: 1300;
+  min-width: 200;
+  height: 700;
+  min-height: 500;
+}
+
+.slideContainer2 {
+  padding-top: 50;
+  flex: 1;
+}
+
+h4 {
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+  color: #3498db;
+  text-decoration: underline;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+.small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.spacer {
+  padding: 0;
+}
+
+.inner-spacer {
+  padding: 40px 40px 40px 40px;
+}
+
+.topBar {
+  width: 100%;
+  background-color: #0162b1;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.tiny {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/*
+        HABIT FORM STYLE:
+---------------------------------------------------------------------
+*/
+.padDiv {
+  padding: 20px;
+}
+/*
+        CALENDAR STYLE:
+---------------------------------------------------------------------
+*/
+
+.calendarPage {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.calendarTopMenu {
+  display: flex;
+  flex-flow: column;
+  height: 10vh;
+}
+
+.calendarContainer {
+  display: flex;
+  flex-flow: column;
+  display: flex;
+  height: 85vh;
+}
+
+.dynamicCalendar {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-spacing: 0px;
+  padding: 0px;
+}
+.dynamicCalendar td {
+  height: 15%;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.calendarWeek {
+  overflow: hidden;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dynamicCalendar td:hover {
+  background-color: lightblue;
+}
+
+.calendarDayNormal {
+  background-color: white;
+  color: black;
+  border: rgb(145, 144, 144) solid 2px;
+}
+
+.calendarDay {
+  background-color: white;
+  color: black;
+  border: rgb(145, 144, 144) solid 2px;
+}
+
+.calendarDayGoodStreak {
+  background-color: rgb(0, 89, 148);
+  color: white;
+}
+
+.calendarDayGood {
+  background-color: rgb(14, 159, 255);
+  color: white;
+}
+
+.calendarDayStreak {
+  background-color: rgb(252, 252, 169);
+  color: black;
+}
+
+.streak {
+  position: relative;
+  background-color: green;
+  color: white;
+  font-size: 1em;
+
+  position: absolute;
+  width: 100%;
+  height: 22px;
+  bottom: 18px;
+}
+.streakWrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.calendarDayNotSoGoodStreak {
+  background-color: rgb(255, 250, 93);
+  color: black;
+}
+
+.calendarDayNotSoGood {
+  background-color: rgb(238, 182, 182);
+  color: black;
+}
+
+.calendarDayNormal_start {
+  background-color: yellow;
+  color: black;
+  border: black solid 4px;
+}
+
+.calendarDayGood_start {
+  background-color: rgb(44, 98, 135);
+  color: white;
+  border: black solid 4px;
+}
+
+.calendarDayNotSoGood_start {
+  background-color: yellow;
+  color: black;
+  border: black solid 4px;
+}
+
+.calendarDayNormal_end {
+  background-color: white;
+  color: black;
+  border: black solid 8px;
+}
+
+.calendarDayGood_end {
+  background-color: rgb(44, 98, 135);
+  color: white;
+  border: black solid 6px;
+}
+
+.calendarDayNotSoGood_end {
+  background-color: rgb(238, 182, 182);
+  color: black;
+  border: red solid 6px;
+}
+
+.calendarAfter {
+  background-color: rgb(193, 193, 193);
+  color: black;
+  border: rgb(213, 212, 212) solid 2px;
+}
+
+.calendarDayAfter_start {
+  background-color: rgb(186, 183, 183);
+  color: black;
+  border: black solid 4px;
+}
+
+.calendarAfter_end {
+  background-color: yellow;
+  color: black;
+  border: black solid 6px;
+}
+
+.editDateInCalendar {
+  z-index: 100;
+  position: fixed;
+  width: 80%;
+  height: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  color: black;
+  border: 10px solid black;
+  padding: 10px;
+}
+
+.dynamicCalendarMonthDay1 {
+  background: black;
+  color: white;
+}
+
+.dynamicCalendarMonthDay1Future {
+  background: gray;
+  color: white;
+}
+
+.entry {
+  background-color: blue;
+  color: white;
+}
+.entry_not {
+  background-color: red;
+  color: white;
+}
+.dynamicCalendar th {
+  width: 14%;
+  height: 10px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+
+#cgrades td,
+#cgrades th {
+  border: 1px solid #000000;
+  padding: 8px;
+}
+
+#cgrades th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+/*log in + sign up page styles*/
+/* modal */
+.homepage-btns {
+  margin-top: 150px;
+  margin-left: 100px;
+}
+.homepage-btns .modal-btns {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 30px;
+}
+
+.homepage-btns #signup-modal-btn {
+  padding: 30px 100px;
+}
+
+.homepage-btns #login-modal-btn {
+  padding: 30px 110px;
+}
+
+.homepage-btns button:hover {
+  background-color: #a8edde;
+}
+
+.hero-banner {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 100px;
+  margin-top: -300px;
+  margin-left: 500px;
+}
+
+/*log in + sign up page styles*/
+
+.loginform {
+  display: inline-block;
+  background: #fff;
+  width: 410px;
+  padding: 40px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0, 1);
+}
+
+.container10 {
+  padding: 40px 40px 40x 40px;
+  border-solid: 10px black;
+}
+
+.create-account {
+  text-align: center;
+}
+
+.create-account:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+.SignUpWindow {
+  display: inline;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0, 1);
+  margin-top: -20px;
+}
+
+.loginform h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.SignUpWindow h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.already-account {
+  text-align: center;
+}
+
+.niceBut:hover {
+  background-color: black;
+}
+
+.niceButton {
+  min-width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: #0162b1;
+  color: yellow;
+}
+
+.tableEditDate {
+  padding: 10px;
+}
+
+.already-account:hover {
+  color: #3498db;
+  text-decoration: un;
+}
+
+#closesignup {
+  cursor: pointer;
+}
+
+#closesignup:hover {
+  color: #3498db;
+}
+
+.loginform form .data {
+  display: inline;
+  height: 45px;
+  width: 30%;
+  margin: 40px 0;
+}
+
+.SignUpWindow form .data {
+  display: inline;
+  height: 45px;
+  width: 30%;
+  margin: 40px 0;
+}
+
+.loginform p {
+  text-align: center;
+}
+
+.SignUpWindow p {
+  text-align: center;
+}
+
+.loginform .data label {
+  font-size: 18px;
+}
+
+.SignUpWindow .data label {
+  font-size: 18px;
+}
+
+form .data input {
+  height: 30px;
+  width: 400px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid silver;
+}
+
+form .data input:focus {
+  border-color: #3498db;
+  border-bottom-width: 2px;
+}
+
+form .forgotpass {
+  margin-left: -8px;
+}
+
+form .forgotpass {
+  margin-left: -8px;
+}
+
+form .forgotpass a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .forgotpass a:hover {
+  text-decoration: underline;
+}
+
+form .btn {
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+}
+
+form .div #login-btn {
+  height: 100%;
+  width: 7;
+  padding: 10px 100px;
+  position: absolute;
+  left: 40%;
+}
+
+form .btn #register-btn {
+  height: 50%;
+  width: 40%;
+  position: relative;
+}
+
+form .btn button {
+  padding: 10px 100px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: -20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+form .btn button:hover {
+  background-color: #a8edde;
+}
+
+/*nav bar*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 180px;
+  height: 170px;
+}
+
+.container #signup-btn {
+  display: block;
+  margin: 30px 0;
+  margin-left: 500px;
+  height: 40px;
+  width: 10%;
+  position: relative;
+}
+
+.container #signup-btn {
+  padding: 10px 100px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: -20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.container #signup-btn:hover {
+  background-color: #a8edde;
+}
+
+/* forgot password*/
+.my-collapsible p,
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.my-collapsible p,
+a {
+  color: #3498db;
+}
+
+/* --------- HabitList--------------------------------- */
+
+.habitslist-btns {
+  width: 400px;
+  height: 100px;
+  border: none;
+  display: flex;
+  /* justify-content: space-evenly;  */
+}
+
+.habitslist-btns .myhabits-btn {
+ left: 60%;
+ position: absolute;
+}
+
+.habitslist-btns button:hover {
+background-color: #a8edde;
+color: white;
+}
+
+.habitslist-btns .calendar-btn {
+  left: 70%;
+  position: absolute;
+}
+
+.addhabit-btn {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+  right: 76%;
+  position: absolute;
+  top: 30%;
+}
+
+
+.addhabit-btn:hover {
+  background-color: #a8edde;
+  color: white;
+}
+
+.habitslist-btns .logout {
+  bottom: -30%;
+  left: 70%;
+  position: absolute;
+}
+
+.habitslist-btns .logout-btn:hover {
+  background-color: #a8edde;
+  color: white;
+}
+
+
+
+/* ------------ table (habits list)------------ */
+
+.table-div {
+  margin-top: -90px;
+}
+.table {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+td, th {
+  /* border: 1px solid #999; */
+  font-size: 20px;
+  border: none !important;
+  /* padding: 0%; */
+  
+}
+
+th {
+  /* text-indent: -90px; */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+tr, td{
+  padding: 30px;
+}
+
